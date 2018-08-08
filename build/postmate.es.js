@@ -245,7 +245,7 @@ function () {
       log('Child: Awaiting messages...');
     }
 
-    this.source.addEventListener('message', function (e) {
+    this.child.addEventListener('message', function (e) {
       if (!sanitize(e, _this3.parentOrigin)) return;
 
       if (process.env.NODE_ENV !== 'production') {
