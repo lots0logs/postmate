@@ -215,7 +215,7 @@ export class ChildAPI {
       log('Child: Awaiting messages...')
     }
 
-    this.source.addEventListener('message', (e) => {
+    this.child.addEventListener('message', (e) => {
       if (!sanitize(e, this.parentOrigin)) return
 
       if (process.env.NODE_ENV !== 'production') {
